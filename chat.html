@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Secure Chat</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="modules/chatPage.js"></script>
+  </head>
+  <body>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/page2.html">Other page</a>
+      <a href="/chat.html" aria-current="page">Chat</a>
+    </nav>
+    <main>
+      <h1>Secure Chat Room</h1>
+      <div class="chat-container">
+        <div id="userSetup">
+          <div class="name-section">
+            <input type="text" id="userName" placeholder="Enter your name" class="name-input">
+            <button id="joinChat" class="btn">Join Chat</button>
+          </div>
+        </div>
+        
+        <div id="chatRoom" style="display: none;">
+          <h2>Welcome, <span id="userDisplayName"></span>!</h2>
+          <div class="messages" id="chatWindow"></div>
+          
+          <div class="media-controls">
+            <input type="file" id="mediaUpload" accept="image/*,video/*" style="display: none;">
+            <button id="uploadBtn" class="btn">Upload Media</button>
+            <button id="privateUploadBtn" class="btn private">Private Upload</button>
+            <img id="mediaPreview" class="media-preview">
+            <div class="upload-progress">
+              <div class="upload-progress-bar"></div>
+            </div>
+          </div>
+
+          <div class="input-section">
+            <input type="text" id="chatInput" placeholder="Type your message" class="message-input">
+            <button id="sendBtn" class="btn">Send</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
